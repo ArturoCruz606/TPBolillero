@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace TpBolillero.Core
 {
@@ -8,11 +9,13 @@ namespace TpBolillero.Core
         private Random Random { get; set; }
         public Aleatorio()
         {
-
+            
         }
         public byte SacarBolilla(List<byte> bolillas)
         {
-            bolillas.Add();
+            var a = bolillas.Count;
+            var b = Random.Next(0,a);
+            return Convert.ToByte(bolillas[b]);
         }
 
     }
