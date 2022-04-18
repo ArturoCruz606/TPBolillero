@@ -5,7 +5,7 @@ namespace TpBolillero.Core
     {
         public List<byte> Adentro { get; set; }
         public List<byte> Afuera { get; set; }
-        private Iazar Azar { get; set; }
+        public Iazar Azar { get; set; }
         public Bolillero(){
             Adentro = new List<byte>();
             Afuera = new List<byte>();
@@ -37,11 +37,16 @@ namespace TpBolillero.Core
             }
             return true;
         }
-        public long JugarN(List<byte> numeros){
-            for (int i = 0; i < ; i++)
+        public long JugarN(List<byte> numeros, long cantidad){
+            long contador = 0;
+            for (int i = 0; i < cantidad; i++)
             {
-                
+                if(Jugar(numeros))
+                    contador++;
+
+                ReIngresar();
             }
+            return contador;
         }
     }
 }
