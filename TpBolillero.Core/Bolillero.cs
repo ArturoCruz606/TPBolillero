@@ -11,14 +11,12 @@ namespace TpBolillero.Core
             Afuera = new List<byte>();
         }
         private void CrearBolillas(byte cantidadbolillas){
-                Adentro.Add(cantidadbolillas);
-        }
-        public Bolillero(byte cantidadbolillas){
-                for (int i = 0; i < cantidadbolillas - 1; i++)
+                for (byte i = 0; i < cantidadbolillas ; i++)
             {
-                    CrearBolillas(cantidadbolillas);
+                    Adentro.Add(i);
             }
         }
+        public Bolillero(byte cantidadbolillas) : this() => CrearBolillas(cantidadbolillas);
         public byte SacarBolilla(){
             var a = Azar.SacarBolilla(Adentro);
             Afuera.Add(a);
