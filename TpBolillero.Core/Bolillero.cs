@@ -57,6 +57,7 @@ namespace TpBolillero.Core
         public object Clone()
         {
             Bolillero Clon = new Bolillero(this.Adentro, this.Afuera);
+            Clon.Azar = this.Azar;
             return Clon;
         }
     }

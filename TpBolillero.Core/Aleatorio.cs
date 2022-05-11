@@ -8,7 +8,7 @@ namespace TpBolillero.Core
         private Random Random { get; set; }
         public Aleatorio()
         {
-            
+            Random = new Random();
         }
         public byte SacarBolilla(List<byte> bolillas)
         {
