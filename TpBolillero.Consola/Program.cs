@@ -38,7 +38,7 @@ namespace TpBolillero.Consola
 
             cronometro.Reset();
             cronometro.Start();
-            Console.WriteLine($"Simulando con hilos");
+            Console.WriteLine($"Simulando con hilos Async");
             System.Console.WriteLine(await simulacion.SimularConHilosAsync(bolillero, lista, repeticiones, 6));
             cronometro.Stop();
             tt = cronometro.Elapsed;
