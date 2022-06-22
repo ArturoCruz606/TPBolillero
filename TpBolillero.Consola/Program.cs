@@ -45,6 +45,16 @@ namespace TpBolillero.Consola
             tiempotranscurrido = String.Format("{0:00}:{1:00}:{2:00}",
             tt.Hours, tt.Minutes, tt.Seconds);
             System.Console.WriteLine(tiempotranscurrido);
+
+            cronometro.Reset();
+            cronometro.Start();
+            Console.WriteLine($"Simulando con hilos ParallelAsync");
+            System.Console.WriteLine(await simulacion.SimularParallelAsync(bolillero, lista, repeticiones, 6));
+            cronometro.Stop();
+            tt = cronometro.Elapsed;
+            tiempotranscurrido = String.Format("{0:00}:{1:00}:{2:00}",
+            tt.Hours, tt.Minutes, tt.Seconds);
+            System.Console.WriteLine(tiempotranscurrido);
         }
     }
 }
